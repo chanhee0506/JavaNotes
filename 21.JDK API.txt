@@ -1,0 +1,33 @@
+1. Package java.lang
+    1) 프로그래밍시 import 하지 않아도 자동으로 import 됨
+    2) 많이 사용하는 기본 클래스들이 속한 패키지 
+
+2. java.lang.Object
+    1) 모든 클래스는 Object 클래스를 상속 받음.
+    2) 모든 클래스의 최상위 클래스
+    3) Object 클래스의 메서드 중 일부는 재정의해서 사용할수 있음
+    4) 컴파일러가 extends Object를 추가함
+    5) toString() 메서드
+        - 객체의 정보를 String으로 바꾸어서 사용할 때 쓰임
+        - String이나 Integer 클래스는 이미 재정의 되어 있음
+
+3. 객체간의 논리적인 동등함
+    1) equals() 메서드
+        - 두 인스턴스의 주소 값을 비교하여 ture/false를 반환
+        - 재정의하여 두 인스턴스가 논리적으로 동일함의 여부를 구현함
+        - 인스턴스가 다르더라도 논리적으로 동일한 경우
+        true를 반환하도록 재정의 할 수 있음
+    2) hashCode() 메서드
+        - 인스턴스의 저장 주소를 반환함
+        - 힙메모리에 인스턴스가 저장되는 방식이 hash 방식
+        - 자료의 특정 값에 대한 저장 위치를 반환해주는 해시함수를 사용
+
+    3) 두 인스턴스가 같다는 것
+        - 두 인스턴스에 대한 equals()의 반환 값이 true,
+          동일한 hashCode()값을 반환    
+
+4. String, StringBuilder, StringBuffer
+    1) Srting 객체 선언(생성)
+        - String str1 = new String("abc");      //인스턴스로 생성
+        - String str2 = "abc";                  // 상수풀의 문자열
+    2) 한번 생성된 String객체는 불변(immutable)
