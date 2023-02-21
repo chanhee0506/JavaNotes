@@ -1,0 +1,30 @@
+1. 프로세스 (Process)
+    1) OS (Operating System)는 동시에 여러개의 프로그램을 실행시킴.
+    2) Process
+        - 프로그램이 실행 중인 상태
+        - 프로그램이 실행 되면 OS로 부터 메모리를 할당받아 프로세스     
+          상태가 됨
+
+2. 스레드 (Thread)
+    1) 하나의 프로세스는 하나 이상의 thread를 가지게 됨.
+    2) 실제 작업(task)을 수행하는 단위는 thread임.
+
+3. 멀티 스레딩 (Multi - threading)
+    1) 여러 thread가 동시에 수행되는 프로그래밍.
+       여러 작업이 동시에 실행되는 효과.
+    2) thread는 각각 자신만의 작업 공간을 가짐 (context)
+    3) 각 thread 사이에서 공유하는 자원이 있을 수 있음
+    4) 여러 thread가 자원을 공유하여 작업이 수행되는 경우
+       서로 자원 차지하려는 race condition이 발생할 수 있음.
+    5) 이렇게 여러 thread가 공유하는 자원 중 경쟁이 발생하는
+       부분을 critical section이라고 함.
+    6) critical section에 대한 동기화를 구현하지 않으면 
+       오류가 발생할 수 있음.
+        - 동기화(Syncronization) : 일종의 순차적 수행
+
+4. 자바Thread 만들기
+    1) Thread 클래스 상속하여 만들기
+    2) Runnable 인터페이스 구현하여 만들기
+        - 자바는 다중 상속이 허용되지 않으므로
+          이미 다른 클래스를 상속한 경우,
+          thread를 만들기 위해 Runnable 인터페이스를 구현하도록 함.
